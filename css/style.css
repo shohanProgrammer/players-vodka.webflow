@@ -10,3 +10,8 @@
     transform: rotate(359deg);
   }
 }
+#navbar {
+    position: sticky!IMPORTANT;
+  width: 100%;
+    z-index: 1;    
+}
