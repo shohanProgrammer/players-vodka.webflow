@@ -19,7 +19,7 @@
   <link href="images/webclip.png" rel="apple-touch-icon">
 </head>
 <body class="body">
-  <div class="header wf-section">
+  <div id="navbar" class="header wf-section">
     <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar-2 w-nav">
       <nav role="navigation" class="nav-menu-2 w-nav-menu">
         <a href="" class="nav-link-2 nav-item w-nav-link">Home</a>
@@ -164,5 +164,17 @@
   AOS.refresh();
 });
     </script>
+  <script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {    
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-150px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
 </body>
 </html>
